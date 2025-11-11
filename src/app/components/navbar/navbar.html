@@ -1,0 +1,25 @@
+ <mat-toolbar color="primary" class="navbar">
+  <span class="toolbar-title">My Angular App</span>
+
+  <span class="spacer"></span>
+
+  <nav>
+    <button mat-button [routerLink]="['/']"  routerLinkActive="active-link" class="nav-button">Home</button>
+    <button mat-button [routerLink]="['/about']" routerLinkActive="active-link" class="nav-button">About</button>
+    <button mat-button [routerLink]="['/ng-class-component']" routerLinkActive="active-link" class="nav-button">NgClass</button>
+    <button mat-button [routerLink]="['/ng-style-component']" routerLinkActive="active-link" class="nav-button">NgStyle</button>
+    <button mat-button [routerLink]="['/control-flow']" routerLinkActive="active-link" class="nav-button">Control Flow</button>
+    <button mat-button [routerLink]="['/ng-for']" routerLinkActive="active-link" class="nav-button">NgFor</button> 
+    <button mat-button [routerLink]="['/signal']" routerLinkActive="active-link" class="nav-button">Signal</button>
+    <button mat-button [routerLink]="['/linkedSignal']" routerLinkActive="active-link" class="nav-button">Linked-Signal</button>
+    <button mat-button [routerLink]="['/template-form']" routerLinkActive="active-link" class="nav-button">Template Form</button>
+    <button mat-button [routerLink]="['/reactive-form']" routerLinkActive="active-link" class="nav-button">Reactive Form</button>
+    <button mat-button [routerLink]="['/get-api']" routerLinkActive="active-link" class="nav-button">Get API</button>
+    <button mat-button [routerLink]="['/resource-api']" routerLinkActive="active-link" class="nav-button">Resource API</button>
+    <button mat-button [routerLink]="['/lifecycle']" routerLinkActive="active-link" class="nav-button">LifeCycle</button>
+    
+  </nav>
+</mat-toolbar>
+ <router-outlet></router-outlet> 
+
+ 

@@ -1,0 +1,21 @@
+<p>Resource-API</p>
+
+<div class="row">
+    <div class="col-3">
+        {{userList.hasValue()}}
+    </div>
+    <div class="col-3">
+        <ul>
+            @for (user of userList.value(); track $index) {
+                <li>{{user.name}} - {{user.username}}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-3">
+        {{userList.isLoading()}}
+    </div>
+
+    <div class="col-3">
+        <button class="btn btn-secondary" (click)="reloadData()">Reload Data</button>
+    </div>
+</div>

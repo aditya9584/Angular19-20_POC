@@ -1,0 +1,46 @@
+<h4>Get-API</h4>
+
+<div class="row">
+    <div class="col-3">
+        <button (click)="getUsers()" class="btn btn-success">Load Users</button>
+    </div>
+    <div class="col-3" style="margin-left: 25rem;">
+        <button (click)="getProducts()" class="btn btn-success">Load Products</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (user of userList; track $index) {
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.website}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-5">
+    <select>
+        @for (product of productList; track $index) {
+            <option [value]="product.product_id">{{product.name}}</option>
+        }
+    </select>
+</div>
+</div>

@@ -1,0 +1,58 @@
+/* Navbar Layout */
+.navbar {
+  background: #43217a; /* Material Indigo */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons in Navbar */
+.nav-button {
+  color: black;
+  font-weight: 400;
+  text-transform: none;
+  margin-left: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  padding: 4px 14px;
+  font-size: 16px;
+}
+
+.nav-button:hover {
+  background-color: rgba(141, 135, 135, 0.897);
+}
+
+/* Active route styling */
+/* .active-link {
+  background-color: rgba(255, 255, 255, 0.25);
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .toolbar-title {
+    font-size: 1.2rem;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    margin-left: 8px;
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,85 @@
+<div class="row"><h1>Control Flow</h1>
+    <div class="col-3">
+        @if (div1Visible == true) {
+        <div class="bg-success p-3">
+            Div 1
+        </div>
+        }
+    </div>
+    <div class="col-3">
+        @if (isChecked ==  true) {
+        <div class="bg-primary p-3">
+            Checkbox is Checked.
+        </div>
+        }@else {
+        <div class="bg-secondary p-3">
+            Checkbox is Un-Checked.
+        </div>
+        }
+    </div>
+    <div class="col-3">
+        <h2>If Else Ladder</h2>
+        @if (dayName == 'mon') {
+            <span>Monday</span>
+        }@else if (dayName == 'tue') {
+            <span>Tuesday</span>
+        }@else if (dayName == 'wed') {
+            <span>Wednesday</span>
+        }@else {
+            <span>Enter Proper Day Name</span>
+        }
+    </div>
+</div>
+
+
+<div class="row pt-4">
+    <div class="col-3">
+            <button class="btn btn-success" (click)="hideShowDiv1(true)">Show</button> 
+            <button class="btn btn-danger" (click)="hideShowDiv1(false)">Hide</button>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isChecked">
+    </div>
+     <div class="col-3">
+        <input type="text" [(ngModel)]="dayName" maxlength="3" placeholder="Enter Day Starting">
+    </div>
+</div>
+<h2>For Loop</h2>
+<div class="row">
+    <div class="col-3">
+        <select>
+            @for (city of cityList; track $index) {
+                <option>{{city}}</option>
+            }
+        </select>
+    </div>
+    <div class="col-3">
+        @for (city of cityList; track $index) {
+            <button style="margin: 5px;" class="btn btn-success">{{city}}</button>
+        }
+    </div>
+</div>
+<div class="row pt-5">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Mobile No.</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (emp of employeeArray; track $index) {
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.city}}</td>
+                        <td>{{emp.contactNo}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

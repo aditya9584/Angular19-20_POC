@@ -1,3 +1,15 @@
+<!-- <div class="row p-3">
+    <div class="col-4">
+        <app-progress-bar [progressValue]="20"></app-progress-bar>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-12 text-center">
+        <app-tabs [tabList]="customerTabs"></app-tabs>
+    </div>
+</div>
+
 <div class="row"><h4>PIPE -</h4>
     <div class="col-3">
         courseName => {{courseName}}
@@ -62,6 +74,7 @@
                     <th>Name</th>
                     <th>City</th>
                     <th>Contact No.</th>
+                    <th>Attendance</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +83,7 @@
                     <td>{{emp.name | notAvailable }}</td>     <!-- customPipe -->
                     <td>{{emp.city | uppercase}}</td>
                     <td>{{emp.contactNo}}</td>
+                    <td><app-progress-bar [progressValue]="emp.attendance"></app-progress-bar></td>
                 </tr>
             </tbody>
         </table>

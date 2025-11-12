@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ProgressBar } from "../../reusable/progress-bar/progress-bar";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ProgressBar],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

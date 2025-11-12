@@ -10,12 +10,14 @@ import { NgIF } from "./components/ng-if/ng-if";
 import { NgClassComponent } from "./components/ng-class-component/ng-class-component";
 import { CommonModule, NgClass, NgStyle } from '@angular/common';
 import { NgStyleComponent } from './components/ng-style-component/ng-style-component';
+import { Layout } from "./components/layout/layout";
+
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, NgClass, CommonModule, RouterOutlet, MatSidenavModule, MatToolbar, MatButtonModule, MatListModule, MatIconModule, NgIF, NgClassComponent, NgStyleComponent, NgStyle],
+  imports: [Navbar,Layout, NgClass, CommonModule, RouterOutlet, MatSidenavModule, MatToolbar, MatButtonModule, MatListModule, MatIconModule, NgIF, NgClassComponent, NgStyleComponent, NgStyle, Layout],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

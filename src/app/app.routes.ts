@@ -12,19 +12,29 @@ import { GetApi } from './components/API/get-api/get-api';
 import { ResourceAPI } from './components/resource-api/resource-api';
 import { LifeCycle } from './components/life-cycle/life-cycle';
 import { NgForComponent } from './components/ng-for-component/ng-for-component';
+import { Login } from './components/login/login';
+import { Layout } from './components/layout/layout';
 
 export const routes: Routes = [
-    { path: '',   component: Home, pathMatch:'full'},  // Home page
-    { path: 'about', component: About }, //About page
-    { path:'ng-class-component', component:NgClassComponent},
-    { path:'ng-style-component', component:NgStyleComponent},
-    { path:'control-flow', component:ControlStatement},
-    { path:'ng-for', component:NgForComponent},
-    { path:'signal', component:Signal},
-    { path:'linkedSignal', component:LinkedSignal},
-    { path:'template-form', component:TemplateForm},
-    { path:'reactive-form', component:ReactiveForm},
-    { path:'get-api', component:GetApi},
-    { path:'resource-api', component:ResourceAPI},
-    { path:'lifecycle', component:LifeCycle},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: Login },
+  {
+    path: '',
+    component: Layout,
+    children: [
+      { path: 'home', component: Home }, 
+      { path: 'about', component: About },
+      { path: 'ng-class-component', component: NgClassComponent },
+      { path: 'ng-style-component', component: NgStyleComponent },
+      { path: 'control-flow', component: ControlStatement },
+      { path: 'ng-for', component: NgForComponent },
+      { path: 'signal', component: Signal },
+      { path: 'linkedSignal', component: LinkedSignal },
+      { path: 'template-form', component: TemplateForm },
+      { path: 'reactive-form', component: ReactiveForm },
+      { path: 'get-api', component: GetApi },
+      { path: 'resource-api', component: ResourceAPI },
+      { path: 'lifecycle', component: LifeCycle },
+    ],
+  },
 ];

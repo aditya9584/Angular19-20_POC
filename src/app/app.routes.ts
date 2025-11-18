@@ -14,6 +14,7 @@ import { LifeCycle } from './components/life-cycle/life-cycle';
 import { NgForComponent } from './components/ng-for-component/ng-for-component';
 import { Login } from './components/login/login';
 import { Layout } from './components/layout/layout';
+import { authGuard } from './guard/auth-guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ export const routes: Routes = [
   {
     path: '',
     component: Layout,
+    canActivate: [authGuard],
     children: [
       { path: 'home', component: Home }, 
       { path: 'about', component: About },

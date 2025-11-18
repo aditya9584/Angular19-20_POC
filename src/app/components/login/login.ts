@@ -36,6 +36,7 @@ export class Login {
       localStorage.setItem("Angular19User",res.data.userId)
       this.router.navigateByUrl("home")
     },error=>{
+      debugger;
       alert("Invalid Credentials");
     })
   }

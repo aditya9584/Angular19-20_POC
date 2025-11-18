@@ -5,8 +5,6 @@
 
   <nav>
 
-  
-
     <button mat-button [routerLink]="['/home']"  routerLinkActive="active-link" class="nav-button">Home</button>
     <button mat-button [routerLink]="['/about']" routerLinkActive="active-link" class="nav-button">About</button>
     <button mat-button [matMenuTriggerFor]="menu" class="nav-button">Attributes</button>
@@ -24,6 +22,7 @@
     <button mat-button [routerLink]="['/resource-api']" routerLinkActive="active-link" class="nav-button">Resource API</button>
     <button mat-button [routerLink]="['/lifecycle']" routerLinkActive="active-link" class="nav-button">LifeCycle</button>
     
+    <button class="btn btn-success"  style="margin:2px ;" type="button" (click)="onLogOff()">LogOut</button>
   </nav>
 </mat-toolbar>
  <router-outlet></router-outlet> 

@@ -1,6 +1,6 @@
 /* Navbar Layout */
 .navbar {
-  background: black; /* Material Indigo 43217a*/
+  background-color: black; /* Material Indigo 43217a*/
   color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 0 24px;
@@ -12,6 +12,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.5px;
+  color: whitesmoke;
 }
 
 .spacer {
@@ -25,7 +26,7 @@ nav {
 
 /* Buttons in Navbar */
 .nav-button {
-  color: black;
+  background-color: white;
   font-weight: 400;
   text-transform: none;
   margin-left: 12px;

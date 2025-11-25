@@ -26,14 +26,12 @@ export class Login {
 
   onLogin(){
     debugger;
-    // if(this.loginObj.userName == "admin" && this.loginObj.password == "112"){
-    //   this.router.navigateByUrl("home")
-    // }else{
-    //   alert("Invalid Credentials")
-    // }
     this.http.post("https://projectapi.gerasim.in/api/UserApp/login",this.apiLoginObj).subscribe((res:any)=>{
       debugger;
-      localStorage.setItem("Angular19User",res.data.userId)
+      localStorage.setItem("Angular19User",res.data.userId);
+      localStorage.setItem("Angular19Token",res.data.token);
+
+      localStorage.setItem("Angular19TokenData", JSON.stringify(res.data));
       this.router.navigateByUrl("home")
     },error=>{
       debugger;

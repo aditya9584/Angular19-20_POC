@@ -1,0 +1,54 @@
+<div class="row">
+     <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Contact No.</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="isLoader"> 
+                    <!-- <ng-container *ngTemplateOutlet="loaderTemplate"></ng-container> -->
+                     <div [ngTemplateOutlet]="loaderTemplate"></div>
+                </ng-container>
+                <ng-container *ngIf="!isLoader">
+                    <tr *ngFor="let emp of employeeArray; let srno=index">
+                        <td>{{srno+1}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.city}}</td>
+                        <td>{{emp.contactNo}}</td>
+                        <td>
+                            <h4 *ngIf="emp.isActive else temInActive">Active</h4>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #loaderTemplate>
+    <tr>
+        <td colspan="4" class="text-align">
+            <div class="spinner-border text-muted"></div>
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-light"></div>
+        </td>
+    </tr>
+</ng-template>
+
+<ng-template #temInActive> 
+    <div class="text-danger">
+       <span>In-Active</span> 
+    </div>
+</ng-template>

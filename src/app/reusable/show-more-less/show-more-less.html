@@ -1,0 +1,6 @@
+@if (!isShowMore) {
+<p>{{text.substring(0,minCharToShow)}} ...</p>
+}@else {
+    <p>{{text}}</p>
+}
+<span (click)="isShowMore = !isShowMore">{{isShowMore ? 'Show Less':'Show More'}}</span>

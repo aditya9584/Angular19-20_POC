@@ -15,6 +15,8 @@ import { NgForComponent } from './components/ng-for-component/ng-for-component';
 import { Login } from './components/login/login';
 import { Layout } from './components/layout/layout';
 import { authGuard } from './guard/auth-guard';
+import { NgTempNgContainer } from './components/ng-temp-ng-container/ng-temp-ng-container';
+import { TestTopicComponent } from './components/test-topic-component/test-topic-component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -37,6 +39,8 @@ export const routes: Routes = [
       { path: 'get-api', component: GetApi },
       { path: 'resource-api', component: ResourceAPI },
       { path: 'lifecycle', component: LifeCycle },
+      { path: 'ng-temp', component:NgTempNgContainer},
+      { path: 'test-topic', component:TestTopicComponent}
     ],
   },
 ];

@@ -1,0 +1,50 @@
+<p>Test-Topic</p>
+
+<!-- <div class="row">
+    <div class="col-3">
+        @if(isShow) {
+            <div class="bg-primary">
+                Div 1
+            </div>
+        }@else {
+            <div class="bg-danger">
+                Div 1
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        <ul>
+            @for (item of cityList; track $index) {
+                @let cityName = item +$index;
+                <li>{{cityName}}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-3"><h4>Signal & Computed Signal</h4>
+        Double=> {{double()}} <br>
+        Double Count=>{{doubleCount()}}
+    </div>
+      <div class="col-3"><h4>Linked Signal</h4>
+        Total Value=> {{totalValue()}} <br>
+        First Num=>{{firstNum()}} <br>
+        Second Num=>{{secondNum()}}
+    </div>
+</div> -->
+
+
+<div class="row">
+    <div class="col-8">
+        <app-my-card [cardTitle]="'Test Card'" [htmlTemplate]="myTem"></app-my-card>
+    </div>
+    <div class="col-4">
+        <app-my-card [cardTitle]="'Test Card'" [htmlTemplate]="myTem2"></app-my-card>
+    </div>
+</div>
+
+<ng-template #myTem>
+    <app-my-table [colArray]="['name','username','email','website']" [gridDataList]="userList"></app-my-table>
+</ng-template>
+
+<ng-template #myTem2>
+   <app-my-table [colArray]="['empId','empName','empProjectName']" [gridDataList]="empList"></app-my-table>
+</ng-template>
